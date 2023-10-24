@@ -23,7 +23,6 @@
     <Folder Include="Dtos\AppRoleDtos\" />
     <Folder Include="Dtos\AboutDtos\" />
     <Folder Include="Dtos\CustomerAccountDtos\" />
-    <Folder Include="Dtos\CustomerAccountProcessDtos\" />
   </ItemGroup>
 
 </Project>

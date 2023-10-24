@@ -45,7 +45,7 @@ namespace MercurTech.PresentationLayer.Controllers
                 if (result.Succeeded)
                 {
                     MimeMessage mimeMessage = new MimeMessage();
-                    MailboxAddress mailboxAddressFrom = new MailboxAddress("Mercur Tech Admin", "mehmetsrgnn@gmail.com");
+                    MailboxAddress mailboxAddressFrom = new MailboxAddress("Yase Admin", "mehmetsrgnn@gmail.com");
                     MailboxAddress mailboxAddressTo = new MailboxAddress("User",appUser.Email);
 
                     mimeMessage.From.Add(mailboxAddressFrom);
@@ -55,11 +55,11 @@ namespace MercurTech.PresentationLayer.Controllers
                     bodyBuilder.TextBody = "Kayıt işlemini tamamlamak için onay kodunuz: " + code;
                     mimeMessage.Body=bodyBuilder.ToMessageBody();
 
-                    mimeMessage.Subject = "MercurTech Onay Kodu";
+                    mimeMessage.Subject = "Yase Atık Onay Kodu";
 
                     SmtpClient client = new SmtpClient();
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("mehmetsrgnn@gmail.com", "write your code here");
+                    client.Authenticate("mehmetsrgnn@gmail.com", "");
                     client.Send(mimeMessage);
                     client.Disconnect(true);
 

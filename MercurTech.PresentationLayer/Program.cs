@@ -1,4 +1,8 @@
+using MercurTech.BusinessLayer.Abstract;
+using MercurTech.BusinessLayer.Concrete;
+using MercurTech.DataAccessLayer.Abstract;
 using MercurTech.DataAccessLayer.Concrete;
+using MercurTech.DataAccessLayer.EntityFramework;
 using MercurTech.EntityLayer.Concrete;
 using MercurTech.PresentationLayer.Models;
 
@@ -8,6 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
+
+builder.Services.AddScoped<ICustomerAccountProcessDal, EfCustomerAccountProcessDal>();
+builder.Services.AddScoped<ICostumerAccountProcessService, CustomerAccountProcessManager>();
 
 var app = builder.Build();
 
