@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MercurTech.BusinessLayer.Abstract
 {
-    public interface ICostumerAccountService: IGenericService<CustomerAccount>
+    public interface ICustomerAccountProcessService:IGenericService<CustomerAccountProcess>
     {
-
+        List<CustomerAccountProcess> TMyLastProcess(int id);
     }
 }

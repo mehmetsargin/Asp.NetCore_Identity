@@ -13,8 +13,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
 
-builder.Services.AddScoped<ICustomerAccountProcessDal, EfCustomerAccountProcessDal>();
-builder.Services.AddScoped<ICostumerAccountProcessService, CustomerAccountProcessManager>();
+builder.Services.AddScoped<ICustomerAccountProcessDal, EfCustomerAccountProcessDal>(); 
+builder.Services.AddScoped<ICustomerAccountProcessService, CustomerAccountProcessManager>();
+
+builder.Services.AddScoped<ICustomerAccountDal, EfCustomerAccountDal>(); //1. parametreyi görünce 2. parametredeki sýnýfý çaðýr!
+builder.Services.AddScoped<ICustomerAccountService, CustomerAccountManager>();
 
 var app = builder.Build();
 

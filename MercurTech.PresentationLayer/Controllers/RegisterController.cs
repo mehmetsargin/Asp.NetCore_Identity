@@ -59,7 +59,7 @@ namespace MercurTech.PresentationLayer.Controllers
 
                     SmtpClient client = new SmtpClient();
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("mehmetsrgnn@gmail.com", "");
+                    client.Authenticate("mehmetsrgnn@gmail.com", "write your code here");
                     client.Send(mimeMessage);
                     client.Disconnect(true);
 

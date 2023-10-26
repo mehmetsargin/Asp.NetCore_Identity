@@ -9,5 +9,6 @@ namespace MercurTech.DataAccessLayer.Abstract
 {
     public interface ICustomerAccountProcessDal:IGenericDal<CustomerAccountProcess>
     {
+        List<CustomerAccountProcess> MyLastProcess(int id);
     }
 }

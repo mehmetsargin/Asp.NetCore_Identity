@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/MyProfile/Index.cshtml";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
 }
 
 <div class="right_col" role="main">
@@ -29,7 +29,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2> Yase Atık <small>Havale İşlemleri</small></h2> 
+                        <h2> Yase Atık <small>Havale İşlemleri - Döviz Cinsi: @ViewBag.currency</small></h2> 
                         <ul class="nav navbar-right panel_toolbox">
                             <li>
                                 <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -74,6 +74,14 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="email" asp-for="Amount" required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">
+                                    Açıklama <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <textarea rows="5" asp-for="Description" class="form-control col-md-7 col-xs-12"></textarea>
                                 </div>
                             </div>
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MercurTech.BusinessLayer.Concrete
 {
-    public class CustomerAccountProcessManager : ICostumerAccountProcessService
+    public class CustomerAccountProcessManager : ICustomerAccountProcessService
     {
         private readonly ICustomerAccountProcessDal _customerAccountProcessDal;
 
@@ -36,6 +36,11 @@ namespace MercurTech.BusinessLayer.Concrete
         public void TInsert(CustomerAccountProcess t)
         {
             _customerAccountProcessDal.Insert(t);
+        }
+
+        public List<CustomerAccountProcess> TMyLastProcess(int id)
+        {
+            return _customerAccountProcessDal.MyLastProcess(id);
         }
 
         public void TUpdate(CustomerAccountProcess t)

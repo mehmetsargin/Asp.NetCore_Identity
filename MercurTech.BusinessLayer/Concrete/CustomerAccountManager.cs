@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MercurTech.BusinessLayer.Concrete
 {
-    public class CustomerAccountManager : ICostumerAccountService
+    public class CustomerAccountManager : ICustomerAccountService
     {
         private readonly ICustomerAccountDal _customerAccountDal;
 
@@ -27,6 +27,11 @@ namespace MercurTech.BusinessLayer.Concrete
         public CustomerAccount TGetById(int id)
         {
             return _customerAccountDal.GetById(id);
+        }
+
+        public List<CustomerAccount> TGetCustomerAccountList(int id)
+        {
+           return _customerAccountDal.GetCustomerAccountList(id);
         }
 
         public List<CustomerAccount> TGetList()
