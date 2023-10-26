@@ -14,7 +14,7 @@ namespace MercurTech.PresentationLayer.Controllers
                 RequestUri = new Uri("https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=TRY&q=1.0"),
                 Headers =
     {
-        { "X-RapidAPI-Key", "34ede82dd1msh5b3764e073375c7p1bb19ejsn2dfe042d25ec" },
+        { "X-RapidAPI-Key", "write your rapid api key here" },
         { "X-RapidAPI-Host", "currency-exchange.p.rapidapi.com" },
     },
             };
@@ -34,7 +34,7 @@ namespace MercurTech.PresentationLayer.Controllers
                 RequestUri = new Uri("https://currency-exchange.p.rapidapi.com/exchange?from=EUR&to=TRY&q=1.0"),
                 Headers =
     {
-        { "X-RapidAPI-Key", "34ede82dd1msh5b3764e073375c7p1bb19ejsn2dfe042d25ec" },
+        { "X-RapidAPI-Key", "write your rapid api key here" },
         { "X-RapidAPI-Host", "currency-exchange.p.rapidapi.com" },
     },
             };
@@ -54,7 +54,7 @@ namespace MercurTech.PresentationLayer.Controllers
                 RequestUri = new Uri("https://currency-exchange.p.rapidapi.com/exchange?from=GBP&to=TRY&q=1.0"),
                 Headers =
     {
-        { "X-RapidAPI-Key", "34ede82dd1msh5b3764e073375c7p1bb19ejsn2dfe042d25ec" },
+        { "X-RapidAPI-Key", "write your rapid api key here" },
         { "X-RapidAPI-Host", "currency-exchange.p.rapidapi.com" },
     },
             };
